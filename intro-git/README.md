@@ -1,6 +1,6 @@
 ### INTRODUCTION TO GIT
 
-### BASICS COMMANDS
+### Basics Commands
 
 - <strong>git add .</strong> <i>or</i> <strong>git add archivo</strong> (añadir archivos al stage area)
 - <strong>git status</strong> (visualizar los archivos que están en el stage area)
@@ -13,6 +13,7 @@
 - <strong>git checkout nombre-rama</strong> (cambiar de rama)
 - <strong>git merge nombre-rama</strong> (unir cambios de dos ramas)
 - <strong>git branch -d nombre-rama</strong> (eliminar rama)
+- <string>git clone <i>uri-repository</i></strong> (clonar repositorio)
 
 ### Tools
 
