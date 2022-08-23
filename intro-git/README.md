@@ -8,3 +8,11 @@
 - <strong>git log</strong> (visualizar los commits realizados en el proyecto)
 - <strong>git push origin <i>rama</i></strong> (subir los cambios al repositorio)
 - <strong>git log --oneline</strong> (visualizar commits y ramas)
+- <strong>git branch nombre-rama</strong> (crear rama)
+- <strong>git branch</strong> (visualizar ramas del proyecto y donde estamos ubicados)
+- <strong>git checkout nombre-rama</strong> (cambiar de rama)
+
+### Tools
+
+- Fig -> Auto complete
+- Oh-my-zsh
