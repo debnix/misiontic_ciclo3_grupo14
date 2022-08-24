@@ -2,6 +2,7 @@
 
 ### Basics Commands
 
+- <strong>git init</strong> (adicionar el proyecto al controlador de versiones git)
 - <strong>git add .</strong> <i>or</i> <strong>git add archivo</strong> (añadir archivos al stage area)
 - <strong>git status</strong> (visualizar los archivos que están en el stage area)
 - <strong>git commit -m "comentario"</strong> (guardar los archivos que están en el stage area)
@@ -13,8 +14,9 @@
 - <strong>git checkout nombre-rama</strong> (cambiar de rama)
 - <strong>git merge nombre-rama</strong> (unir cambios de dos ramas)
 - <strong>git branch -d nombre-rama</strong> (eliminar rama)
-- <string>git clone <i>uri-repository</i></strong> (clonar repositorio)
-- <string>git pull origin nombre-rama</strong> (traer cambios del repositorio)
+- <strong>git clone <i>uri-repository</i></strong> (clonar repositorio)
+- <strong>git pull origin nombre-rama</strong> (traer cambios de github)
+- <strong>git push origin -d nombre-rama</strong> (eliminar una rama de github)
 
 ### Tools
 
