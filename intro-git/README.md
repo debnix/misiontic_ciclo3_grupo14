@@ -14,6 +14,7 @@
 - <strong>git merge nombre-rama</strong> (unir cambios de dos ramas)
 - <strong>git branch -d nombre-rama</strong> (eliminar rama)
 - <string>git clone <i>uri-repository</i></strong> (clonar repositorio)
+- <string>git pull origin nombre-rama</strong> (traer cambios del repositorio)
 
 ### Tools
 
