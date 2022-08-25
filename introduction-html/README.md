@@ -1,6 +1,6 @@
-### INTRODUCTION TO HTML
+# INTRODUCTION TO HTML
 
-# Extensions
+### Extensions
 
 - Live server
 - HTML CSS Support
