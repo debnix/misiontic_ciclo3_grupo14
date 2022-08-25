@@ -5,13 +5,15 @@
 		<!--Indicar al navegador que el documento html será en español-->
 		<meta charset="UTF-16" />
 		<title>Mi primera página web</title>
+		<!--Cargar los estilos-->
+		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<!--Cuerpo del documento-->
 	<body>
 		<!--Cabecera de la página-->
 		<header>
-			<h1>Titulo 1</h1>
+			<h1 style="text-align: center">Titulo 1</h1>
 			<h2>Titulo 2</h2>
 			<h3>Titulo 3</h3>
 			<h4>Titulo 4</h4>
@@ -20,9 +22,9 @@
 		</header>
 		<!--Contenido-->
 		<main>
-			<h2>Novela</h2>
-			<h4>Capitulo I</h4>
-			<p>
+			<h2 id="titulo-principal">Novela</h2>
+			<h4 id="subtitulo-1">Capitulo I</h4>
+			<p class="justificado">
 				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil dolores
 				recusandae vel accusamus eius voluptate, qui ratione iste consequatur
 				iure est cum culpa corrupti, incidunt esse aliquam? Molestiae, libero
@@ -39,8 +41,8 @@
 				consequatur! cualquier cosa <br />
 				otra linea
 			</p>
-			<h4>Caputilo II</h4>
-			<p>
+			<h4 id="subtitulo-2">Caputilo II</h4>
+			<p class="justificado">
 				<span>Lorem</span> ipsum dolor sit amet <strong>consectetur</strong>,
 				adipisicing elit. <b>Nihil dolores recusandae</b> vel
 				<i>accusamus</i> eius voluptate, qui ratione iste consequatur iure est
@@ -60,7 +62,7 @@
 				otra linea
 			</p>
 			<!--Lista-->
-			<div>
+			<div style="text-align: center">
 				<ul>
 					<!--Items-->
 					<li>Item 1</li>
@@ -72,7 +74,13 @@
 			<!--Lista organizada-->
 
 			<!--Crear sección en el contenido de la página-->
-			<section>
+			<section style="color: rgba(6, 233, 59)">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora atque
+					distinctio iste modi, laborum unde vitae vel sequi quas! Neque,
+					pariatur illo corrupti provident ab repellat mollitia voluptatibus
+					suscipit vitae?
+				</p>
 				<ol>
 					<li>Perro</li>
 					<li>Gato</li>
