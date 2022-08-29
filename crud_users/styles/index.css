@@ -1,11 +1,11 @@
 #titulo {
-	text-align: center;
+	color: white;
 }
 
 td,
 th,
 table {
-	border: 1.5px solid rgb(20, 195, 20);
+	border: 1.5px solid rgb(83, 83, 83);
 	padding-left: 15px;
 	padding-right: 15px;
 	text-align: center;
