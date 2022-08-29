@@ -1,3 +1,29 @@
 .titulo {
 	text-align: center;
 }
+
+table {
+	text-align: center;
+}
+
+tr,
+td,
+thead,
+th,
+table {
+	border: 2px solid rgb(5, 146, 24);
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#cont-table {
+	padding: 40px;
+	border: 1px solid red;
+}
