@@ -5,61 +5,68 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Grupo 14</title>
+		<!--Cargar estilos css-->
+		<link rel="stylesheet" href="./styles/index.css" />
 	</head>
 	<body>
 		<!--Cabecera del contenido-->
 		<header>
-			<h2>Usuarios registrados</h2>
+			<h2 id="titulo">Usuarios registrados</h2>
 		</header>
 		<!--Cuerpo del contenido-->
 		<main>
-			<!--Tabla-->
-			<table>
-				<!--Encabezado de la tabla-->
-				<thead>
-					<tr>
-						<th>Foto</th>
-						<th>Nombre</th>
-						<th>Apellido</th>
-						<th>Email</th>
-						<th>Fecha nacimiento</th>
-					</tr>
-				</thead>
-				<!--Cuerpo de la tabla-->
-				<tbody>
-					<!--Fila 1-->
-					<tr>
-						<!--Foto-->
-						<td>
-							<img
-								width="120"
-								src="https://avatars.dicebear.com/api/micah/:seed.svg"
-							/>
-						</td>
-						<!--Nombre-->
-						<td>Alejandra</td>
-						<!--Apellido-->
-						<td>Hernandez</td>
-						<!--Email-->
-						<td>aleja@gmail.com</td>
-						<!--Fecha nacimiento-->
-						<td>25/12/1990</td>
-					</tr>
-					<!--Fila 2-->
-					<tr>
-						<td>
-							<img
-								width="120"
-								src="https://avatars.dicebear.com/api/micah/:seed.svg?mouth=smile&baseColor=apricot&hair=full"
-							/>
-						</td>
-						<td>Diana</td>
-						<td>Narvaez</td>
-						<td>diana@gmail.com</td>
-						<td>20/08/1991</td>
-					</tr>
-				</tbody>
-			</table>
+			<section id="section-table-users">
+				<!--Tabla-->
+				<table>
+					<!--Encabezado de la tabla-->
+					<thead>
+						<tr>
+							<th>Foto</th>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th>Email</th>
+							<th>Fecha nacimiento</th>
+						</tr>
+					</thead>
+					<!--Cuerpo de la tabla-->
+					<tbody>
+						<!--Fila 1-->
+						<tr>
+							<!--Foto-->
+							<td>
+								<img
+									width="120"
+									src="https://avatars.dicebear.com/api/micah/:seed.svg"
+								/>
+							</td>
+							<!--Nombre-->
+							<td>Alejandra</td>
+							<!--Apellido-->
+							<td>Hernandez</td>
+							<!--Email-->
+							<td>aleja@gmail.com</td>
+							<!--Fecha nacimiento-->
+							<td>25/12/1990</td>
+						</tr>
+						<!--Fila 2-->
+						<tr>
+							<td>
+								<img
+									width="120"
+									src="https://avatars.dicebear.com/api/micah/:seed.svg?mouth=smile&baseColor=apricot&hair=full"
+								/>
+							</td>
+							<td>Diana</td>
+							<td>Narvaez</td>
+							<td>diana@gmail.com</td>
+							<td>20/08/1991</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<div id="cont-btn-crear-usuario">
+				<button>Crear usuario</button>
+			</div>
 		</main>
 		<!--Pie de pagina-->
 		<footer></footer>

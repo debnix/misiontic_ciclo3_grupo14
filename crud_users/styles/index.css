@@ -1,0 +1,22 @@
+#titulo {
+	text-align: center;
+}
+
+td,
+th,
+table {
+	border: 1.5px solid rgb(20, 195, 20);
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+}
+table {
+	padding: 0px;
+	width: 100%;
+}
+#section-table-users {
+	padding: 40px;
+}
+#cont-btn-crear-usuario {
+	padding-left: 45%;
+}
