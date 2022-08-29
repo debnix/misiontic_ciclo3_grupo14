@@ -1,5 +1,6 @@
 .titulo {
 	text-align: center;
+	color: white;
 }
 
 table {
@@ -11,7 +12,7 @@ td,
 thead,
 th,
 table {
-	border: 2px solid rgb(5, 146, 24);
+	border: 2px solid rgb(69, 69, 69);
 }
 
 table {
@@ -25,5 +26,9 @@ td {
 
 #cont-table {
 	padding: 40px;
-	border: 1px solid red;
+}
+#cont-btn-crear-usuario {
+	padding-top: 20px;
+	padding-left: 46.5%;
+	padding-bottom: 50px;
 }
