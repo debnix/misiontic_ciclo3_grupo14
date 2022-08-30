@@ -1,0 +1,23 @@
+#titulo-formulario {
+	color: white;
+}
+#section-form form {
+	max-width: 400px;
+	min-width: 200px;
+}
+#section-form {
+	padding-top: 100px;
+	border: 1px solid red;
+	display: flex;
+	justify-content: center;
+}
+/* #boton-crear-user {
+	margin-left: 40%;
+	margin-top: 10px;
+} */
+#cont-btn-crear {
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
