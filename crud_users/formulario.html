@@ -28,10 +28,35 @@
 		></script>
 	</head>
 	<body>
-		<!--Formulario-->
-		<form>
-			<label for="input_nombre">Nombre: </label>
-			<input id="input_nombre" type="text" />
-		</form>
+		<header>
+			<nav class="navbar navbar-dark bg-primary">
+				<!-- Navbar content -->
+				<h2 id="titulo">Usuarios registrados</h2>
+			</nav>
+		</header>
+		<main>
+			<!--Formulario-->
+			<form>
+				<!--Nombre-->
+				<label for="input_nombre" class="form-label">Nombre: </label>
+				<input id="input_nombre" type="text" class="form-control" />
+				<!--Apellido-->
+				<label for="input_apellido" class="form-label">Apellido: </label>
+				<input id="input_apellido" type="text" class="form-control" />
+				<!--Email-->
+				<label for="input_email" class="form-label">Email: </label>
+				<input id="input_email" type="email" class="form-control" />
+				<!--Fecha nacimiento-->
+				<label for="input_fecha_naci" class="form-label">
+					Fecha nacimiento:
+				</label>
+				<input id="input_fecha_naci" type="text" class="form-control" />
+				<!--Foto-->
+				<label for="input_foto" class="form-label">Foto: </label>
+				<input id="input_foto" type="text" class="form-control" />
+				<!--Botón-->
+				<button class="btn btn-primary">Crear</button>
+			</form>
+		</main>
 	</body>
 </html>
