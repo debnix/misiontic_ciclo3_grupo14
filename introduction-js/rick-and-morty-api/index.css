@@ -1,0 +1,9 @@
+.card {
+	width: 200px;
+	height: 250px;
+	border: 1px solid rgb(71, 70, 70);
+	border-radius: 5%;
+}
+#section-characters {
+	padding: 20px;
+}
