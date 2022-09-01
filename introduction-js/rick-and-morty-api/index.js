@@ -18,8 +18,14 @@ function listar_personajes (personajes) {
             <img
               src="${personajes[i].image}"
             />
-            <h5>${personajes[i].name}</h5>
-            <span>${personajes[i].species}</span>
+            <div class="body-card">
+              <h5>${personajes[i].name}</h5>
+              <span>Specie: ${personajes[i].species}</span>
+              <br/>
+              <span>Location: ${personajes[i].location.name}</span>
+              <br/>
+              <span>Origin: ${personajes[i].origin.name}</span>
+            </div>
       </div>
     `
   }

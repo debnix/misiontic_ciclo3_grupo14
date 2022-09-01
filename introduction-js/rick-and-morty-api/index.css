@@ -1,3 +1,6 @@
+body {
+	margin: 0px;
+}
 #section-characters {
 	padding: 20px;
 	display: grid;
@@ -5,12 +8,31 @@
 }
 
 .card {
-	width: 20%;
-	border: 1px solid rgb(71, 70, 70);
+	width: 20vw;
+	border: 1px solid rgb(22, 138, 35);
 	border-radius: 5%;
 	margin: 15px;
 	overflow: hidden;
+	box-shadow: 0 4px 4px 0 rgb(22, 138, 35);
 }
 .card img {
 	width: 100%;
+}
+.body-card {
+	padding: 5px;
+}
+nav {
+	background: green;
+	padding: 10px;
+	box-shadow: 0 0 10px 0 rgb(59, 75, 67);
+}
+nav a {
+	text-decoration: none;
+	color: white;
+	margin: 10px;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: #ee9907;
 }
