@@ -1,9 +1,16 @@
-.card {
-	width: 200px;
-	height: 250px;
-	border: 1px solid rgb(71, 70, 70);
-	border-radius: 5%;
-}
 #section-characters {
 	padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+	width: 20%;
+	border: 1px solid rgb(71, 70, 70);
+	border-radius: 5%;
+	margin: 15px;
+	overflow: hidden;
+}
+.card img {
+	width: 100%;
 }
