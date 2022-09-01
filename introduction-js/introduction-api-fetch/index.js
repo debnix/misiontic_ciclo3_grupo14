@@ -1,4 +1,4 @@
-const uri_users = 'https://jsonplaceholder.typicode.com/users'
+
 
 // Obtener los usuarios
 async function obtener_usuarios (uri_users) {
@@ -17,13 +17,18 @@ function mostrar_usuarios (users) {
   //Variable que representa el body de la tabla
   let tbody = `<tbody>`
   for (let i = 0; i < users.length; i++) {
+    // Obtener la dirección
+    let address = users[i].address.street
+    address += `, ${users[i].address.suite}`
+    address += `,  ${users[i].address.city}`
+    // Variable que representa el cuerpo de la tabla
     tbody += `
       <tr>
       <td>${users[i].id}</td>
       <td>${users[i].name}</td>
       <td>${users[i].username}</td>
       <td>${users[i].email}</td>
-      <td>${users[i].address}</td>
+      <td>${address}</td>
       <td>${users[i].phone}</td>
       <td>${users[i].website}</td>
       </tr>
@@ -35,6 +40,7 @@ function mostrar_usuarios (users) {
 
 // Función principal
 async function main () {
+  const uri_users = 'https://jsonplaceholder.typicode.com/users'
   const users = await obtener_usuarios(uri_users)
   mostrar_usuarios(users)
 }
