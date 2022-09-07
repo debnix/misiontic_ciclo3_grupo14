@@ -14,22 +14,18 @@ import jakarta.persistence.Table;
 public class Persona {
   // ATRIBUTOS - CAMPOS EN BD
   @Id
-  @Column(name = "id")
   private int id;
-  @Column(name = "nombres")
   private String nombres;
-  @Column(name = "apellidos")
   private String apellidos;
-  @Column(name = "email")
   private String email;
-  @Column(name = "fecha_nacimiento")
   private Date fecha_nacimiento;
-  @Column(name = "foto")
   private String foto;
 
+  public Persona() {
+  }
+
   // CONSTRUCTOR
-  public Persona(int id, String nombres, String apellidos, String email, Date fecha_nacimiento, String foto) {
-    this.id = id;
+  public Persona(String nombres, String apellidos, String email, Date fecha_nacimiento, String foto) {
     this.nombres = nombres;
     this.apellidos = apellidos;
     this.email = email;
