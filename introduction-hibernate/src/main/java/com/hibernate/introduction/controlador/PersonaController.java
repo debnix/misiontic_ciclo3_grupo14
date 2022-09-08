@@ -86,4 +86,14 @@ public class PersonaController {
     return update;
   }
 
+  public Calendar stringToCalendar(String fecha) {
+    String arrayFecha[] = fecha.split("/");
+    int year = Integer.parseInt(arrayFecha[2]);
+    int month = Integer.parseInt(arrayFecha[1]) - 1;
+    int date = Integer.parseInt(arrayFecha[0]);
+    Calendar fecha_nacimiento = Calendar.getInstance();
+    fecha_nacimiento.set(year, month, date);
+    return fecha_nacimiento;
+  }
+
 }
