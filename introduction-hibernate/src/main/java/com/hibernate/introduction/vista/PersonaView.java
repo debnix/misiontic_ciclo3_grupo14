@@ -1,6 +1,8 @@
 package com.hibernate.introduction.vista;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import javax.swing.JOptionPane;
 
@@ -25,16 +27,29 @@ public class PersonaView {
 
     String arrayFecha[] = fecha.split("/");
     int year = Integer.parseInt(arrayFecha[2]);
-    int month = Integer.parseInt(arrayFecha[1]);
+    int month = Integer.parseInt(arrayFecha[1]) - 1;
     int date = Integer.parseInt(arrayFecha[0]);
-    Date fecha_nacimiento = new Date(year, month, date);
+    Calendar fecha_nacimiento = Calendar.getInstance();
+    fecha_nacimiento.set(year, month, date);
+    System.out.println(fecha_nacimiento);
 
     boolean create = controller.crearPersona(nombres, apellidos, email, fecha_nacimiento, foto);
+
     if (create) {
       JOptionPane.showMessageDialog(null, "Usuario creado con éxito");
     } else {
       JOptionPane.showMessageDialog(null, "Por favor intenta mas tarde");
     }
+
+  }
+
+  public void mostrarPersonas() {
+    List personas = controller.obtenerPersonas();
+    String info = "--------------PERSONAS--------------\n";
+    for (int i = 0; i < personas.size(); i++) {
+      info += personas.get(i);
+    }
+    JOptionPane.showMessageDialog(null, info);
   }
 
 }

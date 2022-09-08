@@ -1,6 +1,9 @@
 package com.hibernate.introduction.controlador;
 
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -20,7 +23,7 @@ public class PersonaController {
         .buildSessionFactory();
   }
 
-  public boolean crearPersona(String nombres, String apellidos, String email, Date fecha_nacimiento, String foto) {
+  public boolean crearPersona(String nombres, String apellidos, String email, Calendar fecha_nacimiento, String foto) {
     boolean create = false;
     Session session = factory.openSession();
     session.beginTransaction();
@@ -34,6 +37,18 @@ public class PersonaController {
     }
     session.close();
     return create;
+  }
+
+  public List<Persona> obtenerPersonas() {
+    List<Persona> personas = new ArrayList<Persona>();
+    Session session = factory.openSession();
+    session.beginTransaction();
+    try {
+      personas = session.createQuery("from Persona", Persona.class).list();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    return personas;
   }
 
 }
