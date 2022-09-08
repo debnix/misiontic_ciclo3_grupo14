@@ -59,14 +59,19 @@ public class App {
              */
 
             // Update
-            Persona persona = session.find(Persona.class, 5);
-            persona.setNombres("Andres");
-            persona.setFoto("http://new-uri-photo");
-
-            session.merge(persona);
-            session.getTransaction().commit();
+            /*
+             * Persona persona = session.find(Persona.class, 5);
+             * persona.setNombres("Andres");
+             * persona.setFoto("http://new-uri-photo");
+             * 
+             * session.merge(persona);
+             * session.getTransaction().commit();
+             */
 
             // Delete
+            Persona persona = session.find(Persona.class, 6);
+            session.remove(persona);
+            session.getTransaction().commit();
 
         } catch (Exception e) {
             e.printStackTrace();
