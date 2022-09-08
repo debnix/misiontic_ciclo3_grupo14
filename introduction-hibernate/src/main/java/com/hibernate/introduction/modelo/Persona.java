@@ -41,7 +41,7 @@ public class Persona {
     info += "\nNombres: " + nombres;
     info += "\nApellidos: " + apellidos;
     info += "\nEmail: " + email;
-    info += "\nFecha nacimiento: " + fecha_nacimiento;
+    info += "\nFecha nacimiento: " + fecha_nacimiento.getTime();
     info += "\nFoto: " + foto;
     info += "\n------------------------------\n";
 

@@ -51,4 +51,39 @@ public class PersonaController {
     return personas;
   }
 
+  public Persona getPersona(int id) {
+    Persona persona = new Persona();
+    Session session = factory.openSession();
+    session.beginTransaction();
+    try {
+      persona = session.find(Persona.class, id);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    session.close();
+    return persona;
+  }
+
+  public boolean updatePersona(int id, String nombres, String apellidos, String email, Calendar fecha, String foto) {
+    boolean update = false;
+    Persona persona = getPersona(id);
+    persona.setNombres(nombres);
+    persona.setApellidos(apellidos);
+    persona.setEmail(email);
+    persona.setFecha_nacimiento(fecha);
+    persona.setFoto(foto);
+
+    Session session = factory.openSession();
+    session.beginTransaction();
+    try {
+      session.merge(persona);
+      session.getTransaction().commit();
+      update = true;
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    session.close();
+    return update;
+  }
+
 }
