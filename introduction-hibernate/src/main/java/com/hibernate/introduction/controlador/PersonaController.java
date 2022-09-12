@@ -2,7 +2,6 @@ package com.hibernate.introduction.controlador;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -94,6 +93,22 @@ public class PersonaController {
     Calendar fecha_nacimiento = Calendar.getInstance();
     fecha_nacimiento.set(year, month, date);
     return fecha_nacimiento;
+  }
+
+  public String deletePersona(int id) {
+    String message = "";
+    Session session = factory.openSession();
+    session.beginTransaction();
+    try {
+      Persona persona = getPersona(id);
+      session.remove(persona);
+      session.getTransaction().commit();
+      session.close();
+      message = "Persona eliminada con éxito";
+    } catch (Exception e) {
+      message = e.getMessage();
+    }
+    return message;
   }
 
 }

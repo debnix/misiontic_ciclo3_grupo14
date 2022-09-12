@@ -62,11 +62,19 @@ public class PersonaView {
     }
   }
 
+  public void eliminarPersona() {
+    int id = Integer
+        .parseInt(JOptionPane.showInputDialog(null, "Por favor ingrese el identificador de la persona a eliminar"));
+    String message = controller.deletePersona(id);
+    JOptionPane.showMessageDialog(null, message);
+  }
+
   public void menu() {
     String message = "---------------CRUD PERSONAS-----------\n";
     message += "1) Crear persona\n";
     message += "2) Listar personas\n";
     message += "3) Actualizar persona\n";
+    message += "4) Eliminar persona\n";
     message += "-1) Salir\n";
 
     int opc = 0;
@@ -83,6 +91,9 @@ public class PersonaView {
           break;
         case 3:
           actualizarPersona();
+          break;
+        case 4:
+          eliminarPersona();
           break;
         case -1:
           break;
