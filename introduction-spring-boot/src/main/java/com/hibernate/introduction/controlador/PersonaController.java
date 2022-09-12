@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hibernate.introduction.modelo.Persona;
@@ -61,6 +62,24 @@ public class PersonaController {
     }
     session.close();
     return persona;
+  }
+
+  @GetMapping("/commons")
+  public List<Persona> getPersonasComun(@RequestParam String nombre, @RequestParam String apellido) {
+    List<Persona> personas = new ArrayList<>();
+    System.out.println(nombre);
+    System.out.println(apellido);
+    /*
+     * Session session = factory.openSession();
+     * session.beginTransaction();
+     * personas = session.
+     * createQuery("from Persona where nombres like '%:n' and apellidos like '%:a'",
+     * Persona.class)
+     * .setParameter("n", nombre)
+     * .setParameter("a", apellido)
+     * .list();
+     */
+    return personas;
   }
 
   @PostMapping
