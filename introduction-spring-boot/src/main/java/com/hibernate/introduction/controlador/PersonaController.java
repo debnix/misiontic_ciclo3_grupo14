@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,6 +49,20 @@ public class PersonaController {
     return personas;
   }
 
+  @GetMapping("/{id}")
+  public Persona getPersona(@PathVariable(name = "id") int id) {
+    Persona persona = new Persona();
+    Session session = factory.openSession();
+    session.beginTransaction();
+    try {
+      persona = session.find(Persona.class, id);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    session.close();
+    return persona;
+  }
+
   @PostMapping
   public String crearPersona(@RequestBody Persona persona) {
     String message = "";
@@ -63,19 +78,6 @@ public class PersonaController {
     }
     session.close();
     return message;
-  }
-
-  public Persona getPersona(int id) {
-    Persona persona = new Persona();
-    Session session = factory.openSession();
-    session.beginTransaction();
-    try {
-      persona = session.find(Persona.class, id);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    session.close();
-    return persona;
   }
 
   public boolean updatePersona(int id, String nombres, String apellidos, String email, Calendar fecha, String foto) {
