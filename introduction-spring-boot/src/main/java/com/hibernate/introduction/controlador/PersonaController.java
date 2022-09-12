@@ -8,6 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -46,20 +48,21 @@ public class PersonaController {
     return personas;
   }
 
-  public boolean crearPersona(String nombres, String apellidos, String email, Calendar fecha_nacimiento, String foto) {
-    boolean create = false;
+  @PostMapping
+  public String crearPersona(@RequestBody Persona persona) {
+    String message = "";
     Session session = factory.openSession();
     session.beginTransaction();
     try {
-      Persona persona = new Persona(nombres, apellidos, email, fecha_nacimiento, foto);
       session.persist(persona);
       session.getTransaction().commit();
-      create = true;
+      message = "Persona creada con éxito";
     } catch (Exception e) {
       e.printStackTrace();
+      message = e.getMessage();
     }
     session.close();
-    return create;
+    return message;
   }
 
   public Persona getPersona(int id) {
