@@ -13,6 +13,7 @@ Introduction to web development with Java and Spring boot, html, css
 - - Introduction to api fetch
 - - Rick and morty api
 - Introduction to ORM with Java and Hibernate
+- Introduction to Spring Boot
 - Introduction to Mysql
 
 ### Cycle 2
