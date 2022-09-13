@@ -1,4 +1,4 @@
-package com.hibernate.introduction.controlador;
+package com.hibernate.introduction.servicios;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -7,39 +7,21 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.hibernate.introduction.modelo.Persona;
 
-@RestController
-@RequestMapping("/personas")
-public class PersonaController {
+public class PersonaService {
 
   // ATRIBUTOS
   private SessionFactory factory;
 
-  public PersonaController() {
+  public PersonaService() {
     factory = new Configuration()
         .configure("cfg.xml")
         .addAnnotatedClass(Persona.class)
         .buildSessionFactory();
   }
 
-  /*
-   * @GetMapping
-   * public String holaMundo() {
-   * return "Hola mundo utilizando spring boot";
-   * }
-   */
-  @GetMapping
   public List<Persona> obtenerPersonas() {
     List<Persona> personas = new ArrayList<Persona>();
     Session session = factory.openSession();
@@ -52,8 +34,7 @@ public class PersonaController {
     return personas;
   }
 
-  @GetMapping("/{id}")
-  public Persona getPersona(@PathVariable(name = "id") int id) {
+  public Persona getPersona(int id) {
     Persona persona = new Persona();
     Session session = factory.openSession();
     session.beginTransaction();
@@ -66,8 +47,7 @@ public class PersonaController {
     return persona;
   }
 
-  @GetMapping("/commons")
-  public List<Persona> getPersonasComun(@RequestParam String nombre, @RequestParam String apellido) {
+  public List<Persona> getPersonasComun(String nombre, String apellido) {
     List<Persona> personas = new ArrayList<>();
     Session session = factory.openSession();
     session.beginTransaction();
@@ -80,8 +60,7 @@ public class PersonaController {
     return personas;
   }
 
-  @PostMapping
-  public String crearPersona(@RequestBody Persona persona) {
+  public String crearPersona(Persona persona) {
     String message = "";
     Session session = factory.openSession();
     session.beginTransaction();
@@ -97,8 +76,7 @@ public class PersonaController {
     return message;
   }
 
-  @PutMapping
-  public String updatePersona(@RequestBody Persona persona) {
+  public String updatePersona(Persona persona) {
     String message = "";
     Session session = factory.openSession();
     session.beginTransaction();
@@ -114,8 +92,7 @@ public class PersonaController {
     return message;
   }
 
-  @DeleteMapping("/{id}")
-  public String deletePersona(@PathVariable(name = "id") int id) {
+  public String deletePersona(int id) {
     String message = "";
     Session session = factory.openSession();
     session.beginTransaction();
