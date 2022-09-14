@@ -11,10 +11,11 @@ function getDataForm (e) {
     fecha_nacimiento: form.fecha_nacimiento.value,
     foto: form.foto.value
   }
-  send_data(persona)
+  // sendData(persona)
+  clearInputs(form)
 }
 
-async function send_data (persona) {
+async function sendData (persona) {
   // Enviar petición
   const resp = await fetch(URL_API, {
     method: 'POST',
@@ -25,4 +26,12 @@ async function send_data (persona) {
   })
   const text = await resp.text()
   alert(text)
+}
+
+function clearInputs (form) {
+  form.nombre.value = ""
+  form.apellido.value = ""
+  form.email.value = ""
+  form.fecha_nacimiento.value = ""
+  form.foto.value = ""
 }
