@@ -23,6 +23,7 @@ function mostrar_usuarios (users) {
       <td>${obj.apellidos}</td>
       <td>${obj.email}</td>
       <td>${arrayDate[0]}</td>
+      <td> <button class="btn btn-warning">Actualizar</button> <button class="btn btn-danger">Eliminar</button> </td>
     </tr>
   `
   }

@@ -39,30 +39,55 @@
 		<main>
 			<section id="section-form">
 				<!--Formulario-->
-				<form>
+				<form onsubmit="getDataForm(event)">
 					<!--Nombre-->
 					<label for="input_nombre" class="form-label">Nombre: </label>
-					<input id="input_nombre" type="text" class="form-control" />
+					<input
+						id="input_nombre"
+						name="nombre"
+						type="text"
+						class="form-control"
+					/>
 					<!--Apellido-->
 					<label for="input_apellido" class="form-label">Apellido: </label>
-					<input id="input_apellido" type="text" class="form-control" />
+					<input
+						id="input_apellido"
+						type="text"
+						class="form-control"
+						name="apellido"
+					/>
 					<!--Email-->
 					<label for="input_email" class="form-label">Email: </label>
-					<input id="input_email" type="email" class="form-control" />
+					<input
+						id="input_email"
+						type="email"
+						class="form-control"
+						name="email"
+					/>
 					<!--Fecha nacimiento-->
 					<label for="input_fecha_naci" class="form-label">
 						Fecha nacimiento:
 					</label>
-					<input id="input_fecha_naci" type="text" class="form-control" />
+					<input
+						id="input_fecha_naci"
+						type="date"
+						class="form-control"
+						name="fecha_nacimiento"
+					/>
 					<!--Foto-->
 					<label for="input_foto" class="form-label">Foto: </label>
-					<input id="input_foto" type="text" class="form-control" />
+					<input id="input_foto" type="text" class="form-control" name="foto" />
 					<!--Botón-->
 					<div id="cont-btn-crear">
-						<button id="boton-crear-user" class="btn btn-primary">Crear</button>
+						<button id="boton-crear-user" class="btn btn-primary" type="submit">
+							Crear
+						</button>
 					</div>
 				</form>
 			</section>
 		</main>
+
+		<!-----Llamar scripts-->
+		<script src="./js/formulario.js"></script>
 	</body>
 </html>
