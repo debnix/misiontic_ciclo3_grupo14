@@ -7,7 +7,6 @@
 }
 #section-form {
 	padding-top: 100px;
-	border: 1px solid red;
 	display: flex;
 	justify-content: center;
 }
@@ -20,4 +19,16 @@
 	justify-content: center;
 	padding-top: 20px;
 	padding-bottom: 10px;
+}
+
+header nav a {
+	color: white;
+	text-decoration: none;
+	margin: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+header nav a:hover {
+	color: orange;
 }
