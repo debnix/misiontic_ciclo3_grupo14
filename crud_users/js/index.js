@@ -1,3 +1,4 @@
+const url = "http://localhost:8080/personas"
 
 function mostrar_usuarios (users) {
   // Referenciar tabla
@@ -17,7 +18,7 @@ function mostrar_usuarios (users) {
       <td>${arrayDate[0]}</td>
       <td> 
         <button class="btn btn-warning" onclick='update(${JSON.stringify(obj)})'>Actualizar</button> 
-        <button class="btn btn-danger">Eliminar</button> 
+        <button class="btn btn-danger" onclick='deletePerson(${obj.id})'>Eliminar</button> 
       </td>
     </tr>
   `
@@ -37,8 +38,17 @@ async function get_all_users (url) {
   return users
 }
 
+async function deletePerson (id) {
+  // Enviar petición
+  const resp = await fetch(`${url}/${id}`, {
+    method: 'DELETE'
+  })
+  const text = await resp.text()
+  alert(text)
+  main()
+}
+
 async function main () {
-  const url = "http://localhost:8080/personas"
   const users = await get_all_users(url)
   mostrar_usuarios(users)
 }
