@@ -35,3 +35,11 @@ function clearInputs (form) {
   form.fecha_nacimiento.value = ""
   form.foto.value = ""
 }
+
+function getDataUrl () {
+  const url = new URLSearchParams()
+  const persona = url.getAll("persona")
+  console.log(persona)
+}
+
+getDataUrl()
