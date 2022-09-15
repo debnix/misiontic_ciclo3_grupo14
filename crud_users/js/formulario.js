@@ -79,6 +79,8 @@ function getDataUrl () {
 
     UPDATE_PERSON.update = true
     UPDATE_PERSON.id = objPersona.id
+
+    document.getElementById('boton-crear-user').innerText = 'Actualizar'
   }
 
 }
