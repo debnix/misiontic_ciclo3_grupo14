@@ -11,7 +11,7 @@ function getDataForm (e) {
     fecha_nacimiento: form.fecha_nacimiento.value,
     foto: form.foto.value
   }
-  // sendData(persona)
+  sendData(persona)
   clearInputs(form)
 }
 
