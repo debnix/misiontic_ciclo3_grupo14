@@ -2,8 +2,8 @@ const url = "http://localhost:8080/personas"
 
 function mostrar_usuarios (users) {
   // Referenciar tabla
-  const tabla = document.getElementById('table-users')
-  let tbody = '<tbody>'
+  const tabla = document.getElementById('tbody')
+  let tbody = ''
   for (let i = 0; i < users.length; i++) {
     const obj = users[i]
     const arrayDate = obj.fecha_nacimiento.split("T")
@@ -23,8 +23,8 @@ function mostrar_usuarios (users) {
     </tr>
   `
   }
-  tbody += '</tbody>'
-  tabla.innerHTML += tbody;
+  tbody += ''
+  tabla.innerHTML = tbody;
 }
 
 function update (persona) {
